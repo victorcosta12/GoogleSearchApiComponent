@@ -1,5 +1,6 @@
-Usar essa busca é muito simples basta passar no controller os parametros necessarios.
-Ex:
+#Implementação baseada na classe de Wescley Matos https://gitorious.org/google-apis/google-apis-search/trees/master
+#Usar essa busca é muito simples basta passar no controller os parametros necessarios.
+#Ex:
 
 function busca($q=null,$p=null) {
 
