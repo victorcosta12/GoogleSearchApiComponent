@@ -1,0 +1,26 @@
+Usar essa busca é muito simples basta passar no controller os parametros necessarios.
+Ex:
+
+function busca($q=null,$p=null) {
+
+        if(!empty($q)){
+            $keywords = $q;
+        }else{
+            $keywords = $this->data['News']['busca'];
+        }
+
+        $pagina = (!empty($p)) ? $p : 1;
+
+        $this->GoogleSearchApi->busca($keywords, $pagina, 'http://www.nomedo site.com.br/');  // Busca em um site específico
+
+        $resultado = $this->GoogleSearchApi->resultadoSites();
+
+        $this->set('noticias', $resultado);
+
+
+        $this->set('paginators',$this->GoogleSearchApi->paginacao('news','busca'));
+
+
+
+	}
+
